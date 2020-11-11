@@ -162,7 +162,7 @@ sudo dnf install gnome-tweaks
 ```bash
 sudo dnf install tint2
 ```
-My tint2 config files are available [here](/fedora-postinstall/dotfiles).
+My tint2 config files are available [here](/fedora-postinstall/tree/main/dotfiles).
 
 
 ### Change system fonts and Improve font rendering
