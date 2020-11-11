@@ -1,0 +1,7 @@
+#---------------------------------------------
+# TINT2CONF CONFIG FILE
+default_theme = /home/santi/.config/tint2/default.tint2rc
+cmd_property = python /usr/bin/tintwizard.py
+width = 1215
+height = 309
+
