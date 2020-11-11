@@ -162,8 +162,7 @@ sudo dnf install gnome-tweaks
 ```bash
 sudo dnf install tint2
 ```
-My tint2 config files are available [here](/fedora-postinstall/dotfiles).
-
+My tint2 config files are available in the [dotfiles](/smvarela/fedora-postinstall/blob/main/dotfiles) directory.
 
 ### Change system fonts and Improve font rendering
 This is a matter of taste, but I prefer Ubuntu fonts than the Fedora default fonts.
