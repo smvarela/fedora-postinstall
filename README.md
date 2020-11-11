@@ -273,7 +273,7 @@ After installing Google Chrome, you can enable GPU hardware acceleration. Open n
 
 After restarting the navigator, in tab ```chrome://gpu/``` will show the Graphic Feature Status.
 
-![nvidia-settings](/images/chromegpu_eng.png)
+![nvidia-settings](/images/chromegpu_eng.jpg)
 
 ### Important Firefox / Chrome addons
 [HTTPS Everywhere](https://www.eff.org/es/https-everywhere): Force the use of HTTPS protocol in all webpages (if available).
