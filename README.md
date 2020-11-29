@@ -20,6 +20,9 @@ Use this guide at your own risk.
 	- [Customize Gnome Shell](#customize-gnome-shell)
 		- [Install Gnome Tweaks](#install-gnome-tweaks)
 		- [Add bottom panel](#add-bottom-panel)
+		- [Gnome-Shell extensions:](#gnome-shell-extensions)
+		- [Places Status Indicator](#places-status-indicator)
+		- [TopIcons Plus](#topicons-plus)
 		- [Change system fonts and Improve font rendering](#change-system-fonts-and-improve-font-rendering)
 		- [Enable minimize maximize buttons](#enable-minimize-maximize-buttons)
 		- [Replace Nautilus with Nemo](#replace-nautilus-with-nemo)
@@ -163,6 +166,31 @@ sudo dnf install gnome-tweaks
 sudo dnf install tint2
 ```
 My tint2 config files are available in the [dotfiles](dotfiles) directory.
+
+### Gnome-Shell extensions:
+In Gnome Shell you can install some extensions to improve Gnome usability and productivity. These extensions can be donwloaded from [Gnome extensions](https://extensions.gnome.org/) or can be installed with DNF.
+After install any extension you can enable it using Gnome Tweaks.
+
+### Places Status Indicator
+This extension add a menu for quickly navigating places in the system.
+![extension_places](/images/extension_places.png)
+
+If you bookmark yout most useful locacionts on your filesystem with Nautilus, it will appear in this extension.
+
+This extension can be downloaded from [Gnome Extensions Download](https://extensions.gnome.org/extension/8/places-status-indicator/) or can be installed with DNF.
+
+```bash
+sudo dnf install gnome-shell-extension-places-menu
+```
+
+### TopIcons Plus
+This extension moves legacy tray icons (bottom left of Gnome Shell) to the top panel.
+Not all applicacions integrate with Gnome (for example, Liferea, Dropbox...), and still use the classic implementation. With this extension those tray icons will be moved to the top right side of the panel.
+This extension can be downloaded from [Gnome Extensions Download](https://extensions.gnome.org/extension/1031/topicons/) or can be installed with DNF.
+
+```bash
+sudo dnf install gnome-shell-extension-topicons-plus
+```
 
 ### Change system fonts and Improve font rendering
 This is a matter of taste, but I prefer Ubuntu fonts than the Fedora default fonts.
