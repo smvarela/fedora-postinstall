@@ -23,7 +23,8 @@ Use this guide at your own risk.
 		- [Gnome-Shell extensions:](#gnome-shell-extensions)
 		- [Places Status Indicator](#places-status-indicator)
 		- [TopIcons Plus](#topicons-plus)
-		- [Change system fonts and Improve font rendering](#change-system-fonts-and-improve-font-rendering)
+		- [Change system fonts](#change-system-fonts)
+		- [Better font rendering in Fedora](#better-font-rendering-in-fedora)
 		- [Enable minimize maximize buttons](#enable-minimize-maximize-buttons)
 		- [Replace Nautilus with Nemo](#replace-nautilus-with-nemo)
 		- [Use location entry in Nautilus](#use-location-entry-in-nautilus)
@@ -193,7 +194,7 @@ This extension can be downloaded from [Gnome Extensions Download](https://extens
 sudo dnf install gnome-shell-extension-topicons-plus
 ```
 
-### Change system fonts and Improve font rendering
+### Change system fonts
 This is a matter of taste, but I prefer Ubuntu fonts than the Fedora default fonts.
 
 Download Ubuntu fonts from [Google Fonts](https://fonts.google.com/specimen/Ubuntu).
@@ -212,6 +213,26 @@ sudo fc-cache -fv
 Open Gnome Tweaks and select the Ubuntu font and set hintting and subpixel antialiasing. I restart my session, so changes can be applied.
 
 ![Ubuntu fonts](/images/fontsubuntu_eng.png)
+
+### Better font rendering in Fedora
+This repository provides free substitutions for popular proprietary fonts from Microsoft and Apple operating systems. This replacement makes web pages appear closer to what they do on Windows and not using the same font in every webpage.
+
+Subpixel hinting, as it turns out, is patented by Microsoft so most Linux distributions don’t ship with it enabled. Optionally you can enable subpixel (rgb) antialiasing.
+
+Enable COPR repository with packages from this repo:
+```bash
+sudo -s dnf copr enable dawid/better_fonts
+```
+Install packages:
+```bash
+sudo -s dnf install fontconfig-font-replacements
+```
+
+Enable subpixel (rgb) antialiasing:
+```bash
+sudo -s dnf install fontconfig-enhanced-defaults
+```
+Log out and log in again or restart computer.
 
 ### Enable minimize maximize buttons
 I like to have the minimize and maximize buttons in the windows title bar. And can be enabled using GNOME Tweaks:
