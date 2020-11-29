@@ -26,6 +26,7 @@ Use this guide at your own risk.
 		- [Change system fonts and Improve font rendering](#change-system-fonts-and-improve-font-rendering)
 		- [Enable minimize maximize buttons](#enable-minimize-maximize-buttons)
 		- [Replace Nautilus with Nemo](#replace-nautilus-with-nemo)
+		- [Use location entry in Nautilus](#use-location-entry-in-nautilus)
 	- [Useful packages](#useful-packages)
 		- [Codecs](#codecs)
 			- [Multimedia: Music and movies](#multimedia-music-and-movies)
@@ -223,6 +224,18 @@ I don't like Nautilus as a file manager, so I usually replace it with a Nemo fil
 sudo dnf install nemo nemo-extensions nemo-fileroller
 ```
 Then I copy ```nemo.desktop``` file from ```/usr/share/applications/``` to ```~/.local/share/applications/``` and  remove the line `"OnlyShowIn=X-Cinnamon;"`.
+
+### Use location entry in Nautilus
+When I use Nautilus, I prefer to always have a text navigation bar. Can be changed temporary using ```Ctrl + L``` or permanently in a terminal:
+
+```bash
+$ gsettings set org.gnome.nautilus.preferences always-use-location-entry true
+```
+*Navigation bar before:*
+![before](/images/nautilus_bar_before.png)
+
+*Navigation bar after:*
+![after](/images/nautilus_bar_after.png)
 
 
 ## Useful packages
