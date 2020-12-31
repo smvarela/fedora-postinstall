@@ -28,6 +28,7 @@ Use this guide at your own risk.
 		- [Enable minimize maximize buttons](#enable-minimize-maximize-buttons)
 		- [Replace Nautilus with Nemo](#replace-nautilus-with-nemo)
 		- [Use location entry in Nautilus](#use-location-entry-in-nautilus)
+		- [Desktop icons extension](#desktop-icons-extension)
 	- [Useful packages](#useful-packages)
 		- [Codecs](#codecs)
 			- [Multimedia: Music and movies](#multimedia-music-and-movies)
@@ -258,6 +259,24 @@ $ gsettings set org.gnome.nautilus.preferences always-use-location-entry true
 *Navigation bar after:*
 ![after](/images/nautilus_bar_after.png)
 
+### Desktop icons extension
+Desktop Icons NG is an extension for Gnome Shell that adds icons to the desktop. Also adds:
+
+* Drag'n'Drop, both inside the desktop, between desktop and applications, and Nautilus/Nemo windows
+* Allows to use "Open with..." option with several files.
+
+To manually install the extension follow this steps:
+
+Download the extension [Desktop Icons NG](https://extensions.gnome.org/extension/2087/desktop-icons-ng-ding/) from Gnome Extensions. Select an appropriate gnome shell version and extensions version.
+
+Unzip the downloaded file and open ```metadata.json``` file. Copy the UUID of your extension (the UUID is: ding@rastersoft.com) and create a new directory into which we will unzip the content of the previusly downloaded gnome extension. The directory name should be the UUID of this Gnome extension.
+
+```bash
+$ mkdir -p ~/.local/share/gnome-shell/extensions/ding@rastersoft.com
+```
+Unzip Gnome extension into previously created directory. And enable the newly installed extension using ```gnome-tweaks```.
+
+Finally restart gnome-shell.
 
 ## Useful packages
 These are some packages I like to install in my Fedora machine. Just personal taste.
