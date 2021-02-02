@@ -46,6 +46,7 @@ Use this guide at your own risk.
 		- [Mozilla Firefox](#mozilla-firefox)
 			- [Enable hardware acceleration](#enable-hardware-acceleration)
 			- [Enable WebGL](#enable-webgl)
+		- [Check if WebGL is available in any browser](#check-if-webgl-is-available-in-any-browser)
 
 <!-- /TOC -->
 
@@ -400,3 +401,18 @@ In the address bar, type _about:config_. On the new page, accept the warning but
 Close Firefox and re-open it. Then navigate back to _about:support_ and find the Graphics section again. Now in the Graphics section you can see WebGL enabled.
 
 ![firefox WebGL](/images/firefox-webgl.png)
+
+### Check if WebGL is available in any browser
+First check if you are using accelerated graphics:
+
+```bash
+$ glxinfo | grep 'OpenGL version'
+OpenGL version string: 4.6.0 NVIDIA 460.39
+```
+To test if the browser has WebGL enabled and working correctly you can go to these two pages.
+
+**[https://get.webgl.org/](https://get.webgl.org/ "WebGL")** This web shows if your browser supports WebGL.
+![firefox WebGL](/images/webgl-get.png)
+
+**[https://webglreport.com](https://webglreport.com "WebGL report")** This is a web page that reports a browser's WebGL capabilities
+![https://webglreport.com](/images/webgl-report.png)
