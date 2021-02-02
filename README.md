@@ -38,10 +38,11 @@ Use this guide at your own risk.
 		- [Editors](#editors)
 		- [Graphic design editors](#graphic-design-editors)
 		- [Multimedia](#multimedia)
-		- [Google Chrome](#google-chrome)
 		- [Important Firefox / Chrome addons](#important-firefox-chrome-addons)
 		- [Games : Steam](#games-steam)
 		- [Dropbox](#dropbox)
+	- [Browser hardware acceleration](#browser-hardware-acceleration)
+		- [Google Chrome](#google-chrome)
 
 <!-- /TOC -->
 
@@ -345,15 +346,6 @@ sudo dnf -y install handbrake-gui
 ```bash
 sudo dnf -y install mpv
 ```
-### Google Chrome
-After installing Google Chrome, you can enable GPU hardware acceleration. Open new web and navigate to ```chrome:flags``` and and set to enabled these flags:
-- ```Override software rendering list```
-- ```GPU rasterization```
-- ```Zero-copy rasterize```.
-
-After restarting the navigator, in tab ```chrome://gpu/``` will show the Graphic Feature Status.
-
-![nvidia-settings](/images/chromegpu_eng.jpg)
 
 ### Important Firefox / Chrome addons
 [HTTPS Everywhere](https://www.eff.org/es/https-everywhere): Force the use of HTTPS protocol in all webpages (if available).
@@ -372,3 +364,14 @@ sudo dnf install steam
 ```bash
 sudo dnf install dropbox nautilus-dropbox nemo-dropbox
 ```
+
+## Browser hardware acceleration
+### Google Chrome
+After installing Google Chrome, you can enable GPU hardware acceleration. Open new web and navigate to ```chrome:flags``` and and set to enabled these flags:
+- ```Override software rendering list```
+- ```GPU rasterization```
+- ```Zero-copy rasterize```.
+
+After restarting the navigator, in tab ```chrome://gpu/``` will show the Graphic Feature Status.
+
+![nvidia-settings](/images/chromegpu_eng.jpg)
