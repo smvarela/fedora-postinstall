@@ -43,6 +43,9 @@ Use this guide at your own risk.
 		- [Dropbox](#dropbox)
 	- [Browser hardware acceleration](#browser-hardware-acceleration)
 		- [Google Chrome](#google-chrome)
+		- [Mozilla Firefox](#mozilla-firefox)
+			- [Enable hardware acceleration](#enable-hardware-acceleration)
+			- [Enable WebGL](#enable-webgl)
 
 <!-- /TOC -->
 
@@ -375,3 +378,25 @@ After installing Google Chrome, you can enable GPU hardware acceleration. Open n
 After restarting the navigator, in tab ```chrome://gpu/``` will show the Graphic Feature Status.
 
 ![nvidia-settings](/images/chromegpu_eng.jpg)
+
+### Mozilla Firefox
+#### Enable hardware acceleration
+Open the menu in the top-right corner. From this menu, select **Preferences** and go to **General**. Scroll down to **Performance**, uncheck _"Use recommended performance settings"_ and check _"Use hardware acceleration when available"_
+![firefox hardware acceleration](/images/firefox-hardware-accel.png)
+
+#### Enable WebGL
+In first place check the status of the graphic driver. In the address bar type _about:support_. In the new page, scroll down to the **Graphics** section. If WebGL is not enabled, you will see a message like this:
+
+```bash
+WebGL creation failed:
+- WebglAllowWindowsNativeGl:false restricts context creation on this system.
+- Exhausted GL driver options.
+```
+In the address bar, type _about:config_. On the new page, accept the warning button. Use the search box an find this two settings:
+
+- **_webgl.force-enabled_**  - change from _false_ to _true_
+- **_layers.acceleration.force-enabled_** - change from _false_ to _true_
+
+Close Firefox and re-open it. Then navigate back to _about:support_ and find the Graphics section again. Now in the Graphics section you can see WebGL enabled.
+
+![firefox WebGL](/images/firefox-webgl.png)
