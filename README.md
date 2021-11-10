@@ -6,51 +6,7 @@ Ideas and suggestions were collected from different sources and from my previous
 Use this guide at your own risk.
 
 ## Index
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
 
-- [Fedora post installation guide](#fedora-post-installation-guide)
-	- [Index](#index)
-	- [Update entire system](#update-entire-system)
-		- [Enable Fedora Workstation repositories](#enable-fedora-workstation-repositories)
-		- [DNF : Enable DeltaRPM and Faster Mirror plugins](#dnf-enable-deltarpm-and-faster-mirror-plugins)
-		- [Enable RPM Fusion repositories](#enable-rpm-fusion-repositories)
-		- [Install Nvidia drivers](#install-nvidia-drivers)
-		- [(Optional-Fedora 35) - Downgrade driver to version 470](#optional-fedora-35-downgrade-driver-to-version-470)
-		- [Avoid screen tearing](#avoid-screen-tearing)
-		- [Monitor system fans speed](#monitor-system-fans-speed)
-		- [Update Firmware](#update-firmware)
-	- [Customize Gnome Shell](#customize-gnome-shell)
-		- [Install Gnome Tweaks](#install-gnome-tweaks)
-		- [Add bottom panel](#add-bottom-panel)
-		- [Gnome-Shell extensions:](#gnome-shell-extensions)
-		- [Places Status Indicator](#places-status-indicator)
-		- [TopIcons Plus](#topicons-plus)
-		- [Change system fonts](#change-system-fonts)
-		- [Better font rendering in Fedora](#better-font-rendering-in-fedora)
-		- [Enable minimize maximize buttons](#enable-minimize-maximize-buttons)
-		- [Replace Nautilus with Nemo](#replace-nautilus-with-nemo)
-		- [Use location entry in Nautilus](#use-location-entry-in-nautilus)
-		- [Desktop icons extension](#desktop-icons-extension)
-	- [Useful packages](#useful-packages)
-		- [Codecs](#codecs)
-			- [Multimedia: Music and movies](#multimedia-music-and-movies)
-			- [OpenH264](#openh264)
-			- [Hardware video acceleration](#hardware-video-acceleration)
-		- [File manager](#file-manager)
-		- [Editors](#editors)
-		- [Graphic design editors](#graphic-design-editors)
-		- [Multimedia](#multimedia)
-		- [Important Firefox / Chrome addons](#important-firefox-chrome-addons)
-		- [Games : Steam](#games-steam)
-		- [Dropbox](#dropbox)
-	- [Browser hardware acceleration](#browser-hardware-acceleration)
-		- [Google Chrome](#google-chrome)
-		- [Mozilla Firefox](#mozilla-firefox)
-			- [Enable hardware acceleration](#enable-hardware-acceleration)
-			- [Enable WebGL](#enable-webgl)
-		- [Check if WebGL is available in any browser](#check-if-webgl-is-available-in-any-browser)
-
-<!-- /TOC -->
 
 ## Update entire system
 After a clean Fedora install is recommended to update the entire system. This fixes potential bugs that could not be fixed for the initial distribution release. Open a terminal and type:
