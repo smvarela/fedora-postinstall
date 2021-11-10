@@ -15,8 +15,10 @@ Use this guide at your own risk.
 		- [DNF : Enable DeltaRPM and Faster Mirror plugins](#dnf-enable-deltarpm-and-faster-mirror-plugins)
 		- [Enable RPM Fusion repositories](#enable-rpm-fusion-repositories)
 		- [Install Nvidia drivers](#install-nvidia-drivers)
+		- [(Optional-Fedora 35) - Downgrade driver to version 470](#optional-fedora-35-downgrade-driver-to-version-470)
 		- [Avoid screen tearing](#avoid-screen-tearing)
 		- [Monitor system fans speed](#monitor-system-fans-speed)
+		- [Update Firmware](#update-firmware)
 	- [Customize Gnome Shell](#customize-gnome-shell)
 		- [Install Gnome Tweaks](#install-gnome-tweaks)
 		- [Add bottom panel](#add-bottom-panel)
@@ -123,6 +125,20 @@ sudo dnf install akmod-nvidia # rhel/centos users can use kmod-nvidia instead
 sudo dnf install xorg-x11-drv-nvidia-cuda #optional for cuda/nvdec/nvenc support
 ```
 Once the module is built, ```modinfo -F version nvidia``` should outputs the version of the driver
+
+### (Optional-Fedora 35) - Downgrade driver to version 470
+__*This step is optional and only required if your GPU is not supported by NVidia-495 drivers.*__
+
+Fedora 35 installs nVidia drivers version 495 but this version don't support cards from 600 and 700 series. In this cards, the graphic driver will fallback to Nouveau. To use the nVidia drivers should uninstall 495 version and install the 470 version.
+```bash
+sudo dnf remove akmod-nvidia*
+sudo dnf remove *nvidia*
+```
+Install the nNvida-470 drivers:
+
+```bash
+dnf install akmod-nvidia-470xx.x86_64 nvidia-settings-470xx.x86_64 xorg-x11-drv-nvidia-470xx.x86_64 xorg-x11-drv-nvidia-470xx-power.x86_64 xorg-x11-drv-nvidia-470xx-cuda.x86_64 xorg-x11-drv-nvidia-470xx-cuda-libs.i686 xorg-x11-drv-nvidia-470xx-cuda-libs.x86_64 xorg-x11-drv-nvidia-470xx-devel.x86_64 xorg-x11-drv-nvidia-470xx-kmodsrc.x86_64 xorg-x11-drv-nvidia-470xx-libs.i686 xorg-x11-drv-nvidia-470xx-libs.x86_64
+```
 
 ### Avoid screen tearing
 This option reduces the image tearing when reproducing videos but may reduce the performance of some OpenGL applications and may produce issues in WebGL.
