@@ -1,5 +1,7 @@
 # Fedora post installation guide
 
+__*Update to Fedora 35.*__
+
 Welcome to my personal Fedora post installation guide. In this document, you can see the steps I took after a Fedora 33 fresh installation.
 
 Ideas and suggestions were collected from different sources and from my previous experience with Fedora.
