@@ -159,6 +159,14 @@ Driver `k10temp' (autoloaded):
 
 Do you want to overwrite /etc/sysconfig/lm_sensors? (YES/no):
 ```
+### Update Firmware
+Some manufacturers support firmware and UEFI updates on Linux. The following commands will find devices with firmware, search for possible firmware updates, and install the updates.
+```bash
+sudo fwupdmgr get-devices
+sudo fwupdmgr refresh --force
+sudo fwupdmgr get-updates
+sudo fwupdmgr update
+```
 
 ## Customize Gnome Shell
 
