@@ -23,6 +23,7 @@ Use this guide at your own risk.
 		- [Update Firmware](#update-firmware)
 	- [Customize Gnome Shell](#customize-gnome-shell)
 		- [Install Gnome Tweaks](#install-gnome-tweaks)
+		- [Install Gnome Extension App](#install-gnome-extension-app)
 		- [Add bottom panel](#add-bottom-panel)
 		- [Gnome-Shell extensions:](#gnome-shell-extensions)
 		- [Places Status Indicator](#places-status-indicator)
@@ -193,6 +194,11 @@ Gnome Tweaks is used in conjunction with the Gnome Shell to modify its interface
 ```bash
 sudo dnf install gnome-tweaks
 ```
+### Install Gnome Extension App
+Starting with Fedora 35, Gnome Tweaks is not used anymore to enable or configure Gnome Extensions. You must install Gnome Extensions App, an standalone app and not installed by default.
+```bash
+sudo dnf install gnome-extensions-app
+```
 
 ### Add bottom panel
 **_Tint 2_** : I like to have a bottom panel that shows the current open windows. Also shows automatically when i move the cursor over it and hides automatically.
@@ -203,7 +209,7 @@ My tint2 config files are available in the [dotfiles](dotfiles) directory.
 
 ### Gnome-Shell extensions:
 In Gnome Shell you can install some extensions to improve Gnome usability and productivity. These extensions can be donwloaded from [Gnome extensions](https://extensions.gnome.org/) or can be installed with DNF.
-After install any extension you can enable it using Gnome Tweaks.
+After install any extension you can enable it using Gnome Tweaks (in Fedora 34 o lower) or Gnome Extensions App (from Fedora 35).
 
 ### Places Status Indicator
 This extension add a menu for quickly navigating places in the system.
@@ -305,9 +311,9 @@ Unzip the downloaded file and open ```metadata.json``` file. Copy the UUID of yo
 ```bash
 $ mkdir -p ~/.local/share/gnome-shell/extensions/ding@rastersoft.com
 ```
-Unzip Gnome extension into previously created directory. And enable the newly installed extension using ```gnome-tweaks```.
+Unzip Gnome extension into previously created directory. And enable the newly installed extension using ```gnome-extensions-app```.
 
-Finally restart gnome-shell.
+Finally restart gnome-shell (exit from current session or pressing Alt-F2 and writing "r" in the opened window).
 
 ## Useful packages
 These are some packages I like to install in my Fedora machine. Just personal taste.
