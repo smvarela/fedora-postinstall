@@ -8,49 +8,51 @@ Ideas and suggestions were collected from different sources and from my previous
 Use this guide at your own risk.
 
 ## Index
-<!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+<!-- TOC -->
+
 - [Fedora post installation guide](#fedora-post-installation-guide)
-	- [Index](#index)
-	- [Update entire system](#update-entire-system)
-		- [Enable Fedora Workstation repositories](#enable-fedora-workstation-repositories)
-		- [DNF : Enable DeltaRPM and Faster Mirror plugins](#dnf-enable-deltarpm-and-faster-mirror-plugins)
-		- [Enable RPM Fusion repositories](#enable-rpm-fusion-repositories)
-		- [Install Nvidia drivers](#install-nvidia-drivers)
-		- [(Optional-Fedora 35) - Downgrade driver to version 470](#optional-fedora-35-downgrade-driver-to-version-470)
-		- [Avoid screen tearing](#avoid-screen-tearing)
-		- [Monitor system fans speed](#monitor-system-fans-speed)
-		- [Update Firmware](#update-firmware)
-	- [Customize Gnome Shell](#customize-gnome-shell)
-		- [Install Gnome Tweaks](#install-gnome-tweaks)
-		- [Install Gnome Extension App](#install-gnome-extension-app)
-		- [Add bottom panel](#add-bottom-panel)
-		- [Gnome-Shell extensions:](#gnome-shell-extensions)
-		- [Places Status Indicator](#places-status-indicator)
-		- [TopIcons Plus](#topicons-plus)
-		- [Change system fonts](#change-system-fonts)
-		- [Better font rendering in Fedora](#better-font-rendering-in-fedora)
-		- [Enable minimize maximize buttons](#enable-minimize-maximize-buttons)
-		- [Replace Nautilus with Nemo](#replace-nautilus-with-nemo)
-		- [Use location entry in Nautilus](#use-location-entry-in-nautilus)
-		- [Desktop icons extension](#desktop-icons-extension)
-	- [Useful packages](#useful-packages)
-		- [Codecs](#codecs)
-			- [Multimedia: Music and movies](#multimedia-music-and-movies)
-			- [OpenH264](#openh264)
-			- [Hardware video acceleration](#hardware-video-acceleration)
-		- [File manager](#file-manager)
-		- [Editors](#editors)
-		- [Graphic design editors](#graphic-design-editors)
-		- [Multimedia](#multimedia)
-		- [Important Firefox / Chrome addons](#important-firefox-chrome-addons)
-		- [Games : Steam](#games-steam)
-		- [Dropbox](#dropbox)
-	- [Browser hardware acceleration](#browser-hardware-acceleration)
-		- [Google Chrome](#google-chrome)
-		- [Mozilla Firefox](#mozilla-firefox)
-			- [Enable hardware acceleration](#enable-hardware-acceleration)
-			- [Enable WebGL](#enable-webgl)
-		- [Check if WebGL is available in any browser](#check-if-webgl-is-available-in-any-browser)
+    - [Index](#index)
+    - [Update entire system](#update-entire-system)
+        - [Enable Fedora Workstation repositories](#enable-fedora-workstation-repositories)
+        - [DNF : Enable DeltaRPM and Faster Mirror plugins](#dnf--enable-deltarpm-and-faster-mirror-plugins)
+        - [Enable RPM Fusion repositories](#enable-rpm-fusion-repositories)
+        - [Install Nvidia drivers](#install-nvidia-drivers)
+        - [Optional-Fedora 35 - Downgrade driver to version 470](#optional-fedora-35---downgrade-driver-to-version-470)
+        - [Avoid screen tearing](#avoid-screen-tearing)
+        - [Monitor system fans speed](#monitor-system-fans-speed)
+        - [Update Firmware](#update-firmware)
+    - [Customize Gnome Shell](#customize-gnome-shell)
+        - [Install Gnome Tweaks](#install-gnome-tweaks)
+        - [Install Gnome Extension App](#install-gnome-extension-app)
+        - [Add bottom panel](#add-bottom-panel)
+        - [Gnome-Shell extensions:](#gnome-shell-extensions)
+        - [Places Status Indicator](#places-status-indicator)
+        - [TopIcons Plus](#topicons-plus)
+        - [Change system fonts](#change-system-fonts)
+        - [Better font rendering in Fedora](#better-font-rendering-in-fedora)
+        - [Enable minimize maximize buttons](#enable-minimize-maximize-buttons)
+        - [Replace Nautilus with Nemo](#replace-nautilus-with-nemo)
+        - [Use location entry in Nautilus](#use-location-entry-in-nautilus)
+        - [Desktop icons extension](#desktop-icons-extension)
+    - [Useful packages](#useful-packages)
+        - [Codecs](#codecs)
+            - [Multimedia: Music and movies](#multimedia-music-and-movies)
+            - [OpenH264](#openh264)
+            - [Hardware video acceleration](#hardware-video-acceleration)
+        - [File manager](#file-manager)
+        - [Editors](#editors)
+        - [Graphic design editors](#graphic-design-editors)
+        - [Multimedia](#multimedia)
+        - [Important Firefox / Chrome addons](#important-firefox--chrome-addons)
+        - [Games : Steam](#games--steam)
+        - [Dropbox](#dropbox)
+    - [Browser hardware acceleration](#browser-hardware-acceleration)
+        - [Google Chrome](#google-chrome)
+        - [Mozilla Firefox](#mozilla-firefox)
+            - [Enable hardware acceleration](#enable-hardware-acceleration)
+            - [Enable WebGL](#enable-webgl)
+        - [Check if WebGL is available in any browser](#check-if-webgl-is-available-in-any-browser)
+    - [Google Chrome: Enable Memory Saver to Reduce RAM/CPU Usage](#google-chrome-enable-memory-saver-to-reduce-ramcpu-usage)
 
 <!-- /TOC -->
 
@@ -447,3 +449,24 @@ To test if the browser has WebGL enabled and working correctly you can go to the
 
 **[https://webglreport.com](https://webglreport.com "WebGL report")** This is a web page that reports a browser's WebGL capabilities
 ![https://webglreport.com](/images/webgl-report.png)
+
+## Google Chrome: Enable Memory Saver to Reduce RAM/CPU Usage
+The latest versions of the Chrome browser (version 108.0.5359.124 or newer), frees up memory from inactive tabs. This gives active tabs and other apps more computer resources and keeps Chrome fast. The inactive tabs automatically become active again when you go back to them.
+
+
+1. Open Chrome.
+2. Access Chrome Flags with this address in the address bar:
+```bash
+chrome://flags/#high-efficiency-mode-available
+```
+3. Toggle the setting _"Enable the hight efficiency mode feature"_ to _“Enabled”_
+	![settings](/images/chrome-memory-flag.jpg)
+4. Restart the Chrome browser
+5. Go to the address bar in Chrome and go to this address:
+```bash
+chrome://settings/performance
+```
+6. Locate “Memory Saver” and toggle the switch ON to enable the feature
+![settings](/images/chrome-memory-saver.jpg)
+
+7. Relaunch Chrome for the change to take full effect
