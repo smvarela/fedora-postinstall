@@ -9,7 +9,6 @@ Use this guide at your own risk.
 
 ## Index
 <!-- TOC depthFrom:1 depthTo:6 withLinks:1 updateOnSave:1 orderedList:0 -->
-
 - [Fedora post installation guide](#fedora-post-installation-guide)
 	- [Index](#index)
 	- [Update entire system](#update-entire-system)
