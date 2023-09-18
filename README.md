@@ -58,7 +58,11 @@ Use this guide at your own risk.
             - [Enable hardware acceleration](#enable-hardware-acceleration)
             - [Enable WebGL](#enable-webgl)
         - [Check if WebGL is available in any browser](#check-if-webgl-is-available-in-any-browser)
-    - [Google Chrome: Enable Memory Saver to Reduce RAM/CPU Usage](#google-chrome-enable-memory-saver-to-reduce-ramcpu-usage)
+    - [Google Chrome](#google-chrome)
+        - [Enable Memory Saver to Reduce RAM/CPU Usage](#enable-memory-saver-to-reduce-ramcpu-usage)
+        - [Enable Wayland for Chrome/Chromium](#enable-wayland-for-chromechromium)
+    - [Firefox](#firefox)
+        - [Check if Wayland support is enabled](#check-if-wayland-support-is-enabled)
 
 <!-- /TOC -->
 
@@ -464,7 +468,8 @@ To test if the browser has WebGL enabled and working correctly you can go to the
 **[https://webglreport.com](https://webglreport.com "WebGL report")** This is a web page that reports a browser's WebGL capabilities
 ![https://webglreport.com](/images/webgl-report.png)
 
-## Google Chrome: Enable Memory Saver to Reduce RAM/CPU Usage
+## Google Chrome
+### Enable Memory Saver to Reduce RAM/CPU Usage
 The latest versions of the Chrome browser (version 108.0.5359.124 or newer), frees up memory from inactive tabs. This gives active tabs and other apps more computer resources and keeps Chrome fast. The inactive tabs automatically become active again when you go back to them.
 
 
@@ -484,3 +489,26 @@ chrome://settings/performance
 ![settings](/images/chrome-memory-saver.jpg)
 
 7. Relaunch Chrome for the change to take full effect
+
+### Enable Wayland for Chrome/Chromium
+For Google Chrome, Chromium, and their based web browsers (e.g., Edge, Vivaldi), simply type 
+```bash 
+chrome://flags/
+ ```
+ in the address bar and press Enter.
+
+When the page opens, search for __'Preferred Ozone platform'__ and use the dropdown menu to set its value to __'Wayland'__ . Finally, click the __'Relaunch'__ button to apply the change by restarting the web browser.
+![settings](/images/chome_ozone_platform.jpg)
+
+
+## Firefox
+### Check if Wayland support is enabled
+
+To check if your browser is using Wayland or X11, type 
+
+```bash 
+about:support
+ ```
+in the adress bar and press Enter.
+
+When the pages opens, look for __'Window Protocol'__ . It should indicate __'Wayland'__ . The presence of 'X11' means you are running Firefox under the Xorg display server, while 'XWayland' means your system is running Wayland but executing Firefox as a legacy X11 application.
