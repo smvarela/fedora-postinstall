@@ -40,9 +40,15 @@ Use this guide at your own risk.
             - [OpenH264](#openh264)
             - [Hardware video acceleration](#hardware-video-acceleration)
         - [File manager](#file-manager)
+            - [Midnight Commander](#midnight-commander)
         - [Editors](#editors)
+            - [Atom](#atom)
+            - [VSCodium](#vscodium)
         - [Graphic design editors](#graphic-design-editors)
+            - [Gimp and Inkscape](#gimp-and-inkscape)
         - [Multimedia](#multimedia)
+            - [HandBrake](#handbrake)
+            - [MPV - Multimedia player](#mpv---multimedia-player)
         - [Important Firefox / Chrome addons](#important-firefox--chrome-addons)
         - [Games : Steam](#games--steam)
         - [Dropbox](#dropbox)
@@ -340,14 +346,14 @@ dnf install libva-utils libva-vdpau-driver vdpauinfo
 ```
 
 ### File manager
-**_Midnight Commander_**
+#### Midnight Commander
 ```bash
 sudo dnf install mc
 ```
 
 ### Editors
 
-**_Atom_**
+#### Atom
 
 Download the RPM package from [www.atom.io](www.atom.io) and install using the RPM command tool.
 ```bash
@@ -368,18 +374,18 @@ Add this Community Packages:
 └── minimap@4.29.9
 ```
 ### Graphic design editors
-**_Gimp and Inkscape_**.
+#### Gimp and Inkscape
 ```bash
 sudo dnf install inkscape gimp
 ```
 
 ### Multimedia
-**_HandBrake_**
+#### HandBrake
 ```bash
 sudo dnf -y install handbrake-gui
 ```
 
-**_MPV_** - Multimedia player
+#### MPV - Multimedia player
 ```bash
 sudo dnf -y install mpv
 ```
