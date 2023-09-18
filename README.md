@@ -373,6 +373,14 @@ Add this Community Packages:
 ├── markdown-toc@0.4.2
 └── minimap@4.29.9
 ```
+#### VSCodium
+
+To make VSCodium compatible with Wayland, run with these options:
+
+```bash
+  --enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=WaylandWindowDecorations
+```
+
 ### Graphic design editors
 #### Gimp and Inkscape
 ```bash
