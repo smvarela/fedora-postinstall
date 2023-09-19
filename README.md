@@ -34,6 +34,7 @@ Use this guide at your own risk.
         - [Replace Nautilus with Nemo](#replace-nautilus-with-nemo)
         - [Use location entry in Nautilus](#use-location-entry-in-nautilus)
         - [Desktop icons extension](#desktop-icons-extension)
+        - [Dash to Panel extension](#dash-to-panel-extension)
     - [Useful packages](#useful-packages)
         - [Codecs](#codecs)
             - [Multimedia: Music and movies](#multimedia-music-and-movies)
@@ -213,10 +214,29 @@ sudo dnf install gnome-extensions-app
 
 ### Add bottom panel
 **_Tint 2_** : I like to have a bottom panel that shows the current open windows. Also shows automatically when i move the cursor over it and hides automatically.
+
 ```bash
 sudo dnf install tint2
 ```
 My tint2 config files are available in the [dotfiles](dotfiles) directory.
+
+**_[ Update 1 ]_** _Replace Tint2 with the Dash to Panel Extension_
+
+After I switched from XOrg to Wayland in Fedora 39, Tint2 doesn't display all programs, so I replaced it with the Dash to Panel extension. It's a Gnome Shell extension that can be configured to be very similar to Tint2. More information in Gnome-Shell extensions section.
+
+**_[ Update 2 ]_** _Remove Tint2_
+
+```bash
+dnf remove tint2
+```
+
+Delete configuration and cache files
+```shell
+/home/user/.cache/tint2
+/home/user/.config/tint2
+/home/user/.config/autostart/tint2.desktop
+```
+
 
 ### Gnome-Shell extensions:
 In Gnome Shell you can install some extensions to improve Gnome usability and productivity. These extensions can be donwloaded from [Gnome extensions](https://extensions.gnome.org/) or can be installed with DNF.
@@ -325,6 +345,24 @@ $ mkdir -p ~/.local/share/gnome-shell/extensions/ding@rastersoft.com
 Unzip Gnome extension into previously created directory. And enable the newly installed extension using ```gnome-extensions-app```.
 
 Finally restart gnome-shell (exit from current session or pressing Alt-F2 and writing "r" in the opened window).
+
+### Dash to Panel extension
+
+Dash to Panel is an icon taskbar for the Gnome Shell.
+
+![Dash to panel](/images/dash-to-panel-extension.jpg)
+
+ Can be installed from [Gnome extensions](https://extensions.gnome.org/extension/1160/dash-to-panel/). After the installation, you can customize its appearance with the Gnome Extensions app. Dash to Panel also allows you to export and import configurations. Open Dash to panel with Gnome Extensions App.
+    
+**Exporting Settings:**
+1. Switch to the 'About' tab and click on the 'Export to file' button.
+2. Then, select 'dash-to-panel-settings.txt.'
+
+**Importing Settings:**
+1. Switch to the 'About' tab and click on the 'Import from file' button.
+2. Select the file. Your settings will now be imported.
+    
+My personal choices for making Dash to Panel like Tint2 available in the [dotfiles](dotfiles) directory.
 
 ## Useful packages
 These are some packages I like to install in my Fedora machine. Just personal taste.
