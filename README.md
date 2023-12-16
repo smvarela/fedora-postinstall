@@ -21,6 +21,7 @@ Use this guide at your own risk.
         - [Avoid screen tearing](#avoid-screen-tearing)
         - [Monitor system fans speed](#monitor-system-fans-speed)
         - [Update Firmware](#update-firmware)
+        - [Ensuring Software Compatibility with Wayland](#ensuring-software-compatibility-with-wayland)
     - [Customize Gnome Shell](#customize-gnome-shell)
         - [Install Gnome Tweaks](#install-gnome-tweaks)
         - [Install Gnome Extension App](#install-gnome-extension-app)
@@ -198,6 +199,14 @@ sudo fwupdmgr refresh --force
 sudo fwupdmgr get-updates
 sudo fwupdmgr update
 ```
+
+### Ensuring Software Compatibility with Wayland
+I primarily use Wayland as my default session, although I've encountered compatibility issues with certain software. These problems manifest as a black screen during startup, black screens within dialogs, or occasional delays. To resolve these issues, consider adding the following options to the command line:
+
+```bash
+--enable-features=UseOzonePlatform --ozone-platform=wayland --enable-features=WaylandWindowDecorations
+```
+
 
 ## Customize Gnome Shell
 
