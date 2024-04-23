@@ -373,6 +373,8 @@ Dash to Panel is an icon taskbar for the Gnome Shell.
     
 My personal choices for making Dash to Panel like Tint2 available in the [dotfiles](dotfiles) directory.
 
+In Fedora 40 there is a new Gnome extension installed by default incompatible with Dash to Panel. The Window List Extension adds a bottom panel with a traditional window list. You must choose between Window List or Dash to Panel because the functionality is pretty much the same. To activate one or another you must use Extensions application.
+
 ## Useful packages
 These are some packages I like to install in my Fedora machine. Just personal taste.
 
