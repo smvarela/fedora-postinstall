@@ -547,6 +547,12 @@ chrome://flags/
 When the page opens, search for __'Preferred Ozone platform'__ and use the dropdown menu to set its value to __'Wayland'__ . Finally, click the __'Relaunch'__ button to apply the change by restarting the web browser.
 ![settings](/images/chome_ozone_platform.jpg)
 
+**_Update:_** In last Chrome updates (April 2024, Chrome version: 124 ), previous method don't work anymore. You must launch Chrome from command line with the parameters:
+```bash 
+google-chrome --enable-features=UseOzonePlatform --ozone-platform=wayland
+ ```
+or add this parameters to a _.desktop_ shortcut.
+
 
 ## Firefox
 ### Check if Wayland support is enabled
