@@ -555,6 +555,8 @@ google-chrome --enable-features=UseOzonePlatform --ozone-platform=wayland
  ```
 or add this parameters to a _.desktop_ shortcut.
 
+**_Update 2:_** In the latest Chrome update (May 2024, Chrome version: 124.0.6367.118), the issue has been solved. It is no longer necessary to launch Chrome from the command line with parameters
+
 
 ## Firefox
 ### Check if Wayland support is enabled
