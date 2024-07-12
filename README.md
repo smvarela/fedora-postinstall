@@ -51,6 +51,7 @@ Use this guide at your own risk.
         - [Multimedia](#multimedia)
             - [HandBrake](#handbrake)
             - [MPV - Multimedia player](#mpv---multimedia-player)
+                - [MPV without sound](#mpv-without-sound)
         - [Important Firefox / Chrome addons](#important-firefox--chrome-addons)
         - [Games : Steam](#games--steam)
         - [Dropbox](#dropbox)
@@ -449,6 +450,14 @@ sudo dnf -y install handbrake-gui
 #### MPV - Multimedia player
 ```bash
 sudo dnf -y install mpv
+```
+##### MPV without sound
+After Fedora 40 update I played a video and I found that mpv is not able to play audio. I can only see video, but no audio.
+To solve this error, I created a new file ```mpv.conf``` in ```~/.config/mpv/mpv.conf```
+```bash
+# ===== Audio =====
+ao=alsa
+audio-device=auto
 ```
 
 ### Important Firefox / Chrome addons
